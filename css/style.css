@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  main {
+    width: 80%;
+  }
+
+
+.form-field,
+.submit {
+  display: block;
+  margin: 1% 0;
+  height: 25px 
+    
+}
+
+#name {
+  width: 50%;
+}
+
+button {
+  margin-top: 15px;
+}

@@ -18,7 +18,7 @@
         <form class="form js-form">
             <label for="name">
                 Nome
-                <input class="form-field js-field" id="name" maxlength="120" name="name" required type="text">
+                <input class="form-field js-field" id="name" maxlength="120" minlength ="3"    name="name"  required type="text">
             </label>
             <label for="birth-date">
                 Data de Nascimento
@@ -26,6 +26,23 @@
             </label>
             <button id="submit" type="submit">Salvar</button>
         </form>
+
+        <table class="pessoas pessoas-js">
+            <thead>
+              <tr>
+                <th id="nome">Nome</th>
+                <th id="Aniversario">Aniversário</th>
+              </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+          </table>
     </main>
+
+ 
+
 </body>
-</html>
+ 
+
+<!-- pattern="/^[a-zA-Z]*$" -->

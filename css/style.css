@@ -15,7 +15,7 @@ body {
 .submit {
   display: block;
   margin: 1% 0;
-  height: 25px 
+  height: 20px 
     
 }
 
@@ -25,4 +25,9 @@ body {
 
 button {
   margin-top: 15px;
+}
+
+.pessoas{
+ margin-top: 20px;
+    
 }

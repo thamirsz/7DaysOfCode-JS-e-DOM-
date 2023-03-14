@@ -27,18 +27,24 @@ nameField.addEventListener('change', () => {
 
 function exibirDados() {
   const tbody = document.querySelector('.pessoas-js tbody');
+  // Limpa o conteúdo do tbody
   tbody.innerHTML = '';
 
+  // Obtém as pessoas do localStorage ou uma lista vazia se não existir
   const pessoas = JSON.parse(localStorage.getItem('pessoas')) || [];
+
+  // Para cada pessoa no array de pessoas, cria uma nova linha na tabela e adiciona os botões de excluir e editar
   pessoas.forEach((pessoa, index) => {
     const tr = document.createElement('tr');
     const tdNome = document.createElement('td');
     const tdAniversario = document.createElement('td');
     const tdBotoes = document.createElement('td');
 
+    // Adiciona os valores dos atributos 'nome' e 'birthdate' da pessoa nas células correspondentes
     tdNome.textContent = pessoa.nome;
-    tdAniversario.textContent = pessoa   .birthdate;
+    tdAniversario.textContent = pessoa.birthdate;
 
+    // Cria o botão de excluir e adiciona um listener para removê-la do array de pessoas e do localStorage
     const btnExcluir = document.createElement('button');
     btnExcluir.textContent = 'Excluir';
     btnExcluir.addEventListener('click', () => {
@@ -47,6 +53,7 @@ function exibirDados() {
       exibirDados();
     });
 
+    // Cria o botão de editar e adiciona um listener para preencher o formulário com os dados da pessoa selecionada
     const btnEditar = document.createElement('button');
     btnEditar.textContent = 'Editar';
     btnEditar.addEventListener('click', () => {
@@ -54,8 +61,11 @@ function exibirDados() {
       fillFormWithPersonData(pessoa);
     });
 
+    // Adiciona os botões de editar e excluir na célula correspondente
     tdBotoes.appendChild(btnEditar);
     tdBotoes.appendChild(btnExcluir);
+
+    // Adiciona as células na linha criada e a linha no tbody da tabela
     tr.appendChild(tdNome);
     tr.appendChild(tdAniversario);
     tr.appendChild(tdBotoes);
@@ -63,40 +73,39 @@ function exibirDados() {
   });
 }
 
-let editIndex = -1;
+let editIndex = -1; // variável que guarda o índice da pessoa que será editada, inicialmente é -1
 
 function fillFormWithPersonData(person) {
   const form = document.querySelector('.js-form');
-  form.elements.name.value = person.nome;
-  form.elements.birthdate.value = person.birthdate;
+  form.elements.name.value = person.nome; // preenche o campo de nome do formulário com o nome da pessoa que será editada
+  form.elements.birthdate.value = person.birthdate; // preenche o campo de data de nascimento do formulário com a data de nascimento da pessoa que será editada
 }
-
+  // função para lidar com o envio do formulário
 function handleFormSubmit(event) {
-  event.preventDefault();
+  event.preventDefault(); 
 
-  const form = event.target;
-  const nome = form.elements.name.value;
-  const birthdate = form.elements.birthdate.value;
+  const form = event.target; // obtém o formulário que foi submetido
+  const nome = form.elements.name.value; // obtém o valor do campo de nome do formulário
+  const birthdate = form.elements.birthdate.value; // obtém o valor do campo de data de nascimento do formulário
 
   const pessoa = { nome, birthdate };
 
-  let pessoas = JSON.parse(localStorage.getItem('pessoas')) || [];
+  let pessoas = JSON.parse(localStorage.getItem('pessoas')) || []; // obtém as pessoas que já foram cadastradas ou cria um array vazio
 
-  if (editIndex === -1) {
-    pessoas.push(pessoa);
-  } else {
-    pessoas[editIndex] = pessoa;
-    editIndex = -1;
+  if (editIndex === -1) { // se não houver um índice de edição, ou seja, se for um novo cadastro
+    pessoas.push(pessoa); // adiciona a nova pessoa ao array de pessoas
+  } else { // caso contrário, se houver um índice de edição
+    pessoas[editIndex] = pessoa; // substitui a pessoa editada no array de pessoas
+    editIndex = -1; // reseta o índice de edição para -1
   }
 
-  localStorage.setItem('pessoas', JSON.stringify(pessoas));
+  localStorage.setItem('pessoas', JSON.stringify(pessoas)); // salva as pessoas no localStorage em formato JSON
 
-  exibirDados();
+  exibirDados(); 
 
-  form.reset();
-} 
+  form.reset(); // reseta o formulário para que possa ser usado novamente
+}
 
-// função para lidar com o envio do formulário
 
 // adiciona um ouvinte de eventos para o envio do formulário
 const form = document.querySelector('.js-form');

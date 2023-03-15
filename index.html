@@ -9,35 +9,48 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="css/reset.css"> -->
     <script src="main.js" defer></script> 
 </head>
+<header class="cabeça">
+
+    <!-- <h1>Aniversários</h1> -->
+
+</header>
 <body>
     <main>
-        <h1>Cadastro de pessoas</h1>
-        <form class="form js-form">
+       
+        <form  class="form js-form">
             <label for="name">
                 Nome
-                <input class="form-field js-field" id="name" maxlength="120" minlength ="3"    name="name"  required type="text">
+                <input class="form-field js-field" id="name" maxlength="120" minlength ="3"    name="name" placeholder="Insira o nome da pessoa aqui" required type="text">
+                <span class="error-message"></span>
             </label>
             <label for="birth-date">
                 Data de Nascimento
                 <input class="form-field js-field" id="birth-date" name="birthdate" required type="date">
+                <span class="error-message"></span>
             </label>
             <button id="submit" type="submit">Salvar</button>
-        </form>
-
-        <table class="pessoas pessoas-js">
-            <thead>
-              <tr>
-                <th id="nome">Nome</th>
-                <th id="Aniversario">Aniversário</th>
-              </tr>
-            </thead>
-            <tbody>
-                
-            </tbody>
-          </table>
+        </form>    
+            <table class="pessoas pessoas-js">
+                <thead>
+                  <tr>
+                    <th  id="nome">Nome</th>
+                    <th id="aniversario">Aniversário</th>
+                    <th id="acoes">Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+              </table>
     </main>
 
  

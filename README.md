@@ -3,7 +3,7 @@
 
 
 
-![added-statistics-to-structure](https://raw.githubusercontent.com/balta-io/blog/main/documentacao-com-github/images/added-statistics-to-structure.jpg)
+
 
 ##  Sobre
  O projeto inserido neste repositório  é uma página que cria uma tabela para guardar seu aniversário e dos seus amigos.

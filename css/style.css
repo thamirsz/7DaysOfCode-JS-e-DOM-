@@ -40,16 +40,18 @@ body {
 .submit {
   display: block;
   margin: 1% 0;
-  height: 30px; 
-  margin-top: 5px; 
+  height: 35px;
+  margin-top: 4px;
+  padding-left: 15px;
 }
+
 #name, #birth-date{
-  background-color: oldlace;
-  border-color: burlywood;
+  background-color: papayawhip;
+  border: none;
   border-radius: 7px;
 }
 label {
-  font-size: 19px;
+  font-size: 17px;
 }
 
 /*botao enviar*/
@@ -58,7 +60,7 @@ label {
   height: 35px;
   border-radius: 5px;
   background-color: limegreen;
-  border-color: limegreen;
+  border: none;
   font-family: 'Roboto', sans-serif; 
   font-size: 15px;
   color:white;
@@ -78,6 +80,7 @@ table {
   width: 50%;
 }
 
+
 button {
   margin-top: 15px;
 }
@@ -94,6 +97,7 @@ th, td {
 #nome{
   padding-right: 8em;
   padding-left: 8em;
+
 }
 #aniversario{
   padding-left: 5em;
@@ -115,16 +119,17 @@ th, td {
   margin-left: 1em;
   margin-right: 1em;
   background-color: khaki; 
-  border-color: khaki;
+
 }
 .botao-excluir{
   background-color: lightcoral;
-  border-color: lightcoral;
+ 
 }
 .botao{
   width: 40%;
   border-radius: 8px;
   font-family: 'Roboto', sans-serif;
+  border: none;
   
 }
 .botao-excluir:hover{

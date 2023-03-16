@@ -16,7 +16,9 @@ function checkValidity() {
       nameError.style.display = 'none'; // oculta a mensagem de erro
     }
   });
+  
 }
+
 
 
 // função para exibir os dados salvos em uma tabela

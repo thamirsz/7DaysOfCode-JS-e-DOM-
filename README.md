@@ -10,7 +10,7 @@
 
 ### Tecnologias
 <p display="inline-block">
-  <img width="48" src="https://icons8.com.br/icon/20909/html-5" alt="html5-logo"/>
+  <img width="48" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html5-logo"/>
   <img width="48" src="https://icons8.com.br/icon/21278/css3" alt="css3-logo"/>
   <img width="48" src="https://icons8.com.br/icon/108784/javascript" alt="javascipt-logo"/>
 </p>

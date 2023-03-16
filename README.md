@@ -7,6 +7,7 @@
 
 ##  Sobre
  O projeto inserido neste repositório  é uma página que cria uma tabela para guardar seu aniversário e dos seus amigos.
+ <img width="48" src="https://imgur.com/gallery/rIcPi5g" alt="video-de-demonstração"/>
 
 ### Tecnologias
 <p display="inline-block">

@@ -4,10 +4,9 @@
 
 
 
-
 ##  Sobre
  O projeto inserido neste repositório  é uma página que cria uma tabela para guardar seu aniversário e dos seus amigos.
- ![](https://imgur.com/gallery/rIcPi5g)
+ ![]()
 
 
 ### Tecnologias

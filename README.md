@@ -4,8 +4,7 @@
 
 
 
-##  Sobre
- O projeto inserido neste repositório  é uma página que cria uma tabela para guardar seu aniversário e dos seus amigos.
+##  Demonstração
 ![demonstração.gif](https://user-images.githubusercontent.com/110778956/225972774-497ab538-d889-401d-9c93-ef17543b3de8.gif)
 
 
